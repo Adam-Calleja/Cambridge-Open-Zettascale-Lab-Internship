@@ -32,15 +32,15 @@ After completing my inital EDA on the ExaMon M100 dataset, I began working on th
 
 - **Slurm-EDA-June-Analysis**
 
-    In this Jupyter Notebook, I condinued teh EDA started in the *Slurm-EDA-Sample-Data* notebook, analysing the data by calculating statistics and creating plots using the *plotly* library.
+    In this Jupyter Notebook, I continued the EDA started in the *Slurm-EDA-Sample-Data* notebook, analysing the data by calculating statistics and creating plots using the *plotly* library.
 
 - **carbon-footprint-july**
 
     In this final Jupyter Notebook I expanded on the previous notebooks to calculate the energy consumption and carbon footprints of exclusive jobs running on the CSD3 supercomputer. In this notebook I used a different dataset containing all jobs running on CSD3 during July. I first used the previous notebooks to preprocess this new dataset. 
 
-After writing the code in the *carbon-footprint-july* notebook, I had code across all of my notebook that could calculate the energy consumption and carbon footprint of jobs given a dataset of job accounting data. I then wrote the **carbon-framework.py** Python script which takes in the paths to the necessary data files as an argument and creates a new CSV file containing the energy consumption and carbon footprint of exclusive jobs in the input data.
+After writing the code in the *carbon-footprint-july* notebook, I had code across all of my notebooks that could calculate the energy consumption and carbon footprint of jobs given a dataset of job accounting data. I then wrote the **carbon-framework.py** Python script which takes in the paths to the necessary data files as an argument and creates a new CSV file containing the energy consumption and carbon footprint of exclusive jobs in the input data.
 
-This script takes in three file pahts as parameters: 
+This script takes in three file paths as parameters: 
 
 - the path to the CSV file containing job accounting data,
 - the path to the CSV file containing cluster partition data, 
@@ -55,21 +55,25 @@ The second CSV file can obtained by using SLURM's sinfo command with the followi
 
     --format '%R|%D|%c|'
 
-The output CSV file comains the energy consumptio, in Wh; the carbon footprint, in gCO2; and the distance driven by a medium sized car to produce the same carbon footprint, in km for each exclusive job in the input job accounting CSV file.
+The output CSV file contains the energy consumption, in Wh; the carbon footprint, in gCO2; and the distance driven by a medium sized car to produce the same carbon footprint, in km, for each exclusive job in the input job accounting CSV file.
 
 *NOTE: During this project, we only calculated the energy consumption and carbon footprints of exclusive jobs. We define an exclusive job to be **any job which does not share the node it runs on with any other jobs during its runtime**.*
 
-*NOTE: I have removed any code that prepares the Python scripts to query the Victoria Metrics API as this is a private database. As a reult, the Python scripts that would query Victoria Metrics will produce an error when they run.*
+*NOTE: I have removed any code that prepares the Python scripts to query the VictoriaMetrics API as this is a private database. As a reult, the Python scripts that would query VictoriaMetrics will produce an error when they run.*
 
 ## Repository Conents
-- The **data** folder contains all of data used during this project.
+- The **data** folder contains a sample of the data input required by my framework. Due to the sizes of the .csv files I have not included the files created by my Jupyter notebooks. I have also included only the most recent job accounting .csv file. I will describe the data files included below:
+    - The **JulyAnonymizedData.csv** file contains job accounting data for July. This data can be obtained using SLURM's sacct command as decribed above.
+    - The **partition-info-all** file contains cluster partition data, which can be obtained using SLURM's sinfo command.
 - The **notebooks** folder contains all of the Jypiter Notebooks created during this project. 
 - The **Introductory-Work** folder contains an EDA project I completed prior to starting the main internship project. 
 - The **carbon-framework.py** file contains the Python script which was the main output of this internship project. 
-- The **Internship Presentation Slides** pdf conatins the slides I created for my presentation concluding my project. 
-- The **Internship Technical Report** pdf contains the technical report I wrote to conclude my prject. 
+- The **Summer-Internship-Presentation-Slides** pdf conatins the slides I created for my presentation concluding my project. 
+- The **Summer Internship Technical Report** pdf contains the technical report I wrote to conclude my prject. 
 
 ## Authors and acknowledgment
 This project was completed as part of my internship at the Cambridge Open Zettascale Lab, in collaboration with the University of Cambridge.
 
-First I would like to thank Dominic Frient, who mentored me during my internship. I would also like to thank Projeet Bhaumik, who worked alongside me during this internship project.
+Many thanks to Projeet Bhaumik, a fellow student Intern who helped with the initial
+processing and analysis of the job accounting data and Dominic Friend who mentored me
+throughout this summer internship project and was extremely helpful and supportive.
