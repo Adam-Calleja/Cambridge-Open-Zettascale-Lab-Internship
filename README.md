@@ -65,7 +65,7 @@ The output CSV file contains the energy consumption, in Wh; the carbon footprint
 
 ## Repository Conents
 - The **data** folder contains a sample of the data input required by my framework. Due to the sizes of the .csv files I have not included the files created by my Jupyter notebooks. I have also included only the most recent job accounting .csv file. I will describe the data files included below:
-    - The **JulyAnonymizedData.csv** file contains job accounting data for July. This data can be obtained using SLURM's sacct command as decribed above.
+    - The **JulyAnonymizedData.csv** file contains anonymised job accounting data for July. This data can be obtained using SLURM's sacct command as decribed above. To keep user data private, this data is anonymized containing hashes.
     - The **partition-info-all** file contains cluster partition data, which can be obtained using SLURM's sinfo command.
 - The **notebooks** folder contains all of the Jypiter Notebooks created during this project. 
 - The **Introductory-Work** folder contains an EDA project I completed prior to starting the main internship project. 
