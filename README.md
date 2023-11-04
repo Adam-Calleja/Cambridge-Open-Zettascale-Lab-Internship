@@ -1,7 +1,7 @@
 # Cambridge-Open-Zettascale-Lab-Internship
 
 ## Description
-This repository contains all of the work I completed during my internship at the Cambridge Open Zettascale Lab.
+This repository contains all of the work I completed during my internship at the University of Cambridge, in partnership with the Cambridge Open Zettascale Lab.
 
 The objective of this summer internship project was to develop a framework to calculate and report the energy consumption and carbon footprint of jobs running on the CSD3 supercomputer. I decided to implement this framework in Python, utilising the following Python libraries: 
 
