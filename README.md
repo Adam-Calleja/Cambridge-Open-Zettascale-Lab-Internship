@@ -13,6 +13,8 @@ The objective of this summer internship project was to develop a framework to ca
 - requests
 - pytz
 - joblib
+- matplotlib
+- plotly
 
 To begin my internship I carried out some initial research into HPC and came across the ExaMon M100 dataset which contains a large amount of telemetry data for CINECA’s Marconi100 Tier-0 supercomputer. Since I knew this was similar to the data I would work with during my intership I decided to carry out a short EDA on a small subset of this data, which can be found in the **ExaMon EDA** Jupyter Notebook within the *Introductory-Work* folder.
 
@@ -20,7 +22,7 @@ After completing my inital EDA on the ExaMon M100 dataset, I began working on th
 
 - **Slurm-EDA-Sample-Data**
 
-    In this Jupyter Notebook I start an EDA on SLURM job accounting data for the CSD3 supercomputer. While starting this EDA I did not have access to user's job accounting data so I created some sample data by submitting my own jobs on the CSD3 supercomputer using the SLURM job scheduler. The purpose of this Jupyter Notebook was to familiarise myself with SLURM and using the cluster. I also created a DataFrame containing information about each partition of the cluster which I access in later notebooks. 
+    In this Jupyter Notebook I start an EDA on SLURM job accounting data for the CSD3 supercomputer. While starting this EDA I did not have access to users' job accounting data so I created some sample data by submitting my own jobs on the CSD3 supercomputer using the SLURM job scheduler. The purpose of this Jupyter Notebook was to familiarise myself with SLURM and using the cluster. I also created a DataFrame containing information about each partition of the cluster which I access in later notebooks. 
 
 - **Slurm-EDA-June-Preparation**
 
@@ -28,11 +30,11 @@ After completing my inital EDA on the ExaMon M100 dataset, I began working on th
 
 - **Slurm-EDA-June-Exclusive**
 
-    In this Jupyter Notebook I continued the data processing started in the *Slurm-EDA-June-Preparation*. In particular I identified which jobs are exclusive (do not share the node they run on with any other jobs during their runtime). This is important since, for the sake of this project, we assume that all jobs are exclusive and remove any jobs that are not.
+    In this Jupyter Notebook I continued the data processing started in the *Slurm-EDA-June-Preparation* notebook. In particular I identified which jobs are exclusive (which jobs do not share the node they run on with any other jobs during their runtime). This is important since, for the sake of this project, we assume that all jobs are exclusive and remove any jobs that are not.
 
 - **Slurm-EDA-June-Analysis**
 
-    In this Jupyter Notebook, I continued the EDA started in the *Slurm-EDA-Sample-Data* notebook, analysing the data by calculating statistics and creating plots using the *plotly* library.
+    In this Jupyter Notebook, I continued the EDA started in the *Slurm-EDA-Sample-Data* notebook, analysing the data by calculating statistics and creating plots using the *matplotlib* and *plotly* libraries.
 
 - **carbon-footprint-july**
 
