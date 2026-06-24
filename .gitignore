@@ -1,0 +1,28 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging / build artefacts
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Environment files / secrets
+.env
+.env.*
+
+# OS cruft
+.DS_Store
+Thumbs.db
