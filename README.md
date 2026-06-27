@@ -1,5 +1,7 @@
 # CSD3 HPC Carbon Accounting Framework
 
+[![Smoke](https://github.com/Adam-Calleja/Cambridge-Open-Zettascale-Lab-Internship/actions/workflows/smoke.yml/badge.svg)](https://github.com/Adam-Calleja/Cambridge-Open-Zettascale-Lab-Internship/actions/workflows/smoke.yml)
+
 Python framework for estimating per-job energy use and carbon emissions from SLURM accounting data on the University of Cambridge CSD3 supercomputer.
 
 This repository is the public, anonymised portfolio version of work completed during an internship with the Cambridge Open Zettascale Lab. It is framed as an inspectable engineering artifact: the code, methodology, sample data, report, and presentation are included, while private SLURM records and VictoriaMetrics telemetry access are intentionally excluded.
